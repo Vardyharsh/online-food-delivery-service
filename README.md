@@ -1,7 +1,7 @@
 # online-food-delivery-service
 Mini Dbms-project using PHP, MYSQL. HTML, CSS and JavaScript
 
-Contributors:
+Contributors: <br />
          K. Aishwarya <br />
-         jaspreet Singh<br />
+         Jaspreet Singh<br />
          Harshavardhan Kumar 

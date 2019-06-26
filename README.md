@@ -2,6 +2,6 @@
 Mini Dbms-project using PHP, MYSQL. HTML, CSS and JavaScript
 
 Contributors:
-         K. Aishwarya
-         jaspreet Singh
+         K. Aishwarya <br />
+         jaspreet Singh<br />
          Harshavardhan Kumar 

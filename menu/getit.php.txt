@@ -1,0 +1,23 @@
+<?php
+
+$con = mysqli_connect('localhost','root','15106787','project');
+
+$name= $_GET['name'];
+$price=$_GET['price'];
+         
+       /*	$qry="call pro2($name,$price);";	*/
+ 
+$qry ="INSERT INTO checkout(res_id,name,price)
+       VALUES('1','$name','$price');";
+$run =mysqli_query($con,$qry);
+if($run==true)
+{
+  echo "hello";
+  header("LOCATION:menulassi.html");
+}
+else
+{
+	echo "Not inserted";
+}
+
+?>

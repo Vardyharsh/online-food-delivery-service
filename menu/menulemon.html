@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("images/lemonthree.jpg");
+
+    /* Full height */
+    height: 75%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div.gallery {
+    margin: 30px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+a{
+text-decoration:none;
+font-family:verdana;
+color:black;
+}
+h2{
+font-family:verdana;
+margin-left:50px;
+}
+
+.footer {
+height:30%;
+   position:relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+font-size:24px;
+font-family:verdana;
+   color: white;
+   text-align: center;
+}
+.container {
+    position: relative;
+}
+* {
+    box-sizing: border-box;
+}
+
+.gallery {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/* Bottom right text */
+.text-block {
+border-radius:1em;
+    position: absolute;
+    bottom: 300px;
+    left: 50px;
+    background-color:white;;
+    color:black;
+  font-family:verdana;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.text-block h2{
+margin-left:0px;
+}
+.wer{
+border-radius:0.1em;
+position:fixed;
+top:250px;
+right:50px;
+padding:20px;
+background-color:green;
+font-size:50px;
+color:white;
+}
+.wer a{
+color:white;
+}
+</style>
+<script>
+ function passval(name,price)
+ {
+   window.location.href="lemon.php?name=" + name + "&price=" + price;
+ }
+ </script>
+</head>
+<body>
+<div class="bg">
+<div class="text-block"> 
+    <h2 style="text-align:center;">Lemon Three</h2>
+<br>
+    <p>Arabian,Indian,Opens at 10:30 a.m.</p>
+  </div>
+</div>
+<br>
+<h2>Mains</h2>
+<br>
+<div class="row">
+<div class="gallery">
+  
+  <div class="desc" onclick="passval('Grill Biryani','305.00')">Grill Biryani<br>INR 305.00</div>
+</div>
+
+<div class="gallery">
+ <div class="desc" onclick="passval('Tandoori Biryani','305.00')">Tandoori Biryani<br>INR 305.00</div>    
+</div>
+
+<div class="gallery">
+    <div class="desc" onclick="passval(Kalmi Kabab','145.00')">Kalmi Kabab<br>INR 145.00</div>  
+</div>
+
+<div class="gallery">
+<div class="desc" onclick="passval('Shawarma Roll','65.00')">Shawarma Roll<br>INR 65.00</div>
+</div>
+</div>
+<div class="row">
+<div class="gallery">
+     <div class="desc" onclick="passval('Tandoori Chicken','160.00')">Tandoori Chicken<br>INR 160.00</div>
+  
+</div>
+<div class="gallery">
+    <div class="desc" onclick="passval('Tandoori Kebab','130.00')">Tandoori Kebab<br>INR 130.00</div>
+</div> 
+<div class="gallery">
+    <div class="desc" onclick="passval('Mutton Fry','205.00')">Mutton Fry<br>INR 205.00</div>
+</div>
+<div class="gallery">
+
+    <div class="desc" onclick="passval('Mutton Chilli','205.00')">Mutton Chilli<br>INR 205.00</div>
+
+</div>
+</div> 
+<div class="row">
+<div class="gallery">
+  
+  <div class="desc" onclick="passval('Coin Parotta','15.00')">Coin parotta<br>INR 15.00</div>
+</div>
+<div class="gallery">
+  
+  <div class="desc" onclick="passval('Aloo Parotta','55.00')">Aloo Parotta<br>INR 55.00</div>
+</div>
+</div>
+<div class="wer">
+<a href="checkout.php" class="button">Checkout</a> </div>
+<div class="footer">
+  <p style="text-align:center;">Lemon Three</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+delimiter $$
+         create procedure pro5(IN name1 varchar(30), IN price1 varchar(10), IN id varchar(10))
+	     begin
+         declare res int;
+	     select count(name) into res from checkout where name=name1;
+		 if res<1 then
+	     INSERT INTO checkout(res_id,name,price) values(id,name1,price1);
+		 else
+		 update checkout
+         set qty= qty+1
+		 where name = name1;
+		 end if;
+		 end $$
+		 delimiter;
+		 
+		 
+		 
+		              delimiter $$
+                       create trigger trig
+				       before update
+				       on mlassi
+				       for each row
+                       begin
+				       update mlassi 
+					    set qty =10
+						where new.qty<10;
+					   end;
+					   $$
+					 delimiter ;
+					 
+DELIMITER |
+
+CREATE TRIGGER TRIGGER_Products_Insert AFTER INSERT ON Products
+    FOR EACH ROW BEGIN
+        UPDATE Products
+        SET current = 0
+        WHERE   id = new.id
+            AND current = 1
+            AND autonumber <> new.autonumber;
+    END;
+|
+
+DELIMITER ;
+					 
+					 
+					 
+					 
+					 
+					 
+					
+delimiter $$
+create function test () returns int
+   DETERMINISTIC
+   begin 
+	declare res1 int;
+	declare res2 int;
+	declare total int;
+	select sum(price*qty) into res1 from checkout;
+	select 20*count(distinct res_id) into res2 from checkout;
+	select 1.05*(res1+res2) into total ;
+	return total;
+   end$$
+delimiter ;
+ 
+
+    	
+		
+		
+		
+		
+		
